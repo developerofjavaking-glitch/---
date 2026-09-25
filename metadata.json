@@ -1,0 +1,6 @@
+{
+  "name": "আল কুরআন",
+  "description": "কুরআন শরীফের ১১৪টি সুরা, আরবি আয়াত, বাংলা অনুবাদ, সুরার ফজিলত ও শানে নুযূল, সহীহ হাদিস সংকলন এবং অডিও তেলাওয়াত।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

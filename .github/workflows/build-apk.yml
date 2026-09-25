@@ -24,7 +24,12 @@ jobs:
           gradle-version: '9.3.1'
 
       - name: Create .env file (Gemini API key)
-        run: echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" > .env
+        run: |
+          if [ -n "${{ secrets.GEMINI_API_KEY }}" ]; then
+            echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" > .env
+          else
+            echo "GEMINI_API_KEY=dummy_key_for_ci_build" > .env
+          fi
 
       - name: Generate debug keystore
         run: |
